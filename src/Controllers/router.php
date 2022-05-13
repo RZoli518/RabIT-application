@@ -41,6 +41,7 @@ function __autoload($className)
     }
 	else
 	{ 
-        die("File '$filename' containing class '$className' not found."); 
+        $filename = $className . '.php';
+        die("Class '$className' not found."); 
     }
 }

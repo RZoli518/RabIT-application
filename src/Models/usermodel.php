@@ -1,13 +1,34 @@
 <?php
 class UserModel
 {
-	private $data = array
-	('new' => array('title' => 'New Page', 'content' => 'New test site'),
-	 'mvc' => array('title' => 'Users', 'content' => 'Show users'));
-	
-	public function get_data($title)
+	public function get_data()
 	{
-		$returnData = $this->data[$title];
+        $data = $this->getDbData();
+		$returnData = array();
+        foreach($data as $u){
+            array_push($returnData, $u);
+        }
 		return $returnData;
 	}
+
+    function getDbData(){
+        $servername = "localhost";
+        $username = "root";
+        $password = "mysql";
+
+        $conn = mysqli_connect($servername, $username, $password, 'rabit_application_db');
+        if(!$conn){
+            echo 'Connection error: ' . mysqli_connect_error();
+        }
+
+        $sql = 'SELECT * FROM user';
+        $result = mysqli_query($conn, $sql);
+
+        $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        mysqli_free_result($result);
+        mysqli_close($conn);
+
+        return $users;
+    }
 }

@@ -9,10 +9,9 @@ class Usercontroller
 		
 		if(isset($variables['data']))
 		{
-			$requestData = $userModel->get_data($variables['data']);
+			$requestData = $userModel->get_data();
 			$view = new ViewLoader('userlist');
-			$view->assign('title', $requestData['title']);
-			$view->assign('content', $requestData['content']);
+			$view->assign('data', $requestData);
 		}
 		else
 		{

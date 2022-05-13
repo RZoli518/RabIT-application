@@ -9,10 +9,9 @@ class Adcontroller
 		
 		if(isset($variables['data']))
 		{
-			$requestData = $adModel->get_data($variables['data']);
+			$requestData = $adModel->get_data();
 			$view = new ViewLoader('adlist');
-			$view->assign('title', $requestData['title']);
-			$view->assign('content', $requestData['content']);
+			$view->assign('data', $requestData);
 		}
 		else
 		{
