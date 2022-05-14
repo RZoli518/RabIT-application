@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^localhost/RabIT_application/RabIT-application/src/
+RewriteCond %{REQUEST_URI} !^/index.php?home&data=mvc
+RewriteRule ^(.*)$ /index.php?home&data=mvc

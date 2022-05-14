@@ -1,4 +1,7 @@
 <?php
+
+//this file and the navigation system is to be replaced after .htaccess rewrite
+
 //split the URL to find the requested page
 $request = $_SERVER['QUERY_STRING'];
 $params = explode('&', $request);
@@ -12,6 +15,15 @@ foreach($params as $param)
     $variable = $splitlink[0];
     $value = $splitlink[1];
 	$variables[$variable] = $value;
+}
+
+switch ($page){
+    case 'usercontroller':
+        break;
+    case 'adcontroller':
+        break;
+    default:
+        $page = 'homecontroller';
 }
 
 $target = 'Controllers/'.$page.'.php';

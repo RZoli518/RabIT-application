@@ -1,33 +1,124 @@
 body,
-html {
+html 
+{
   padding: 0;
   margin: 0;
 }
-.column {
-  display:inline-block;
-  width:33%;
+.head
+{
+    padding-top: 5%;
+    height: 10%;
+    width: 100%;
+    display: block;
+    background-color: #ffffff;
+    top: 0;
+    text-align: center; 
+}
+.head h1
+{
+    padding: 2.5%;
+    margin: auto;
+    background-color: #03045e;
+    color: #caf0f8;
+    width: 40%;
+    border-radius: 20px;
+}
+.column 
+{
+  width:33.33333%;
   margin-right:-4px;
+  position: fixed;
   height:100%;
   z-index: -10;
+  top: 0;
+  overflow-x: hidden;
 }
 .column-a 
 {
-    background-color:yellow;
+    background-color:#caf0f8;
+    left: 0;
 }
 .column-b 
 {
-    background-color:blue;
+    background-color: #0077b6;
 }
 .column-c 
 {
-    background-color:yellow;
+    right: 0;
+    background-color:#caf0f8;
 }
-table
+.centered 
 {
-    width: 60%;
+    width: 50%;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+}
+.tablediv
+{
+    position: relative;
+    margin-top: 10%;
+}
+.centered .tablediv table
+{
+    width: 80%;
     margin: auto;
+    border-collapse: separate;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    text-align: center;
+}
+.centered .tablediv thead
+{
+    background-color: #03045e;
+    color: #ffffff;
+    text-align: center;
+}
+.centered .tablediv th,
+.centered .tablediv td
+{
+    padding: 3% 4%;
+}
+.centered .tablediv tbody tr {
+    border-bottom: 3px solid #dddddd;
+    background-color: #00b4d8;
+}
+.centered .tablediv tr:nth-of-type(even) {
+    background-color: #caf0f8;
+}
+.centered .tablediv tbody tr:last-of-type {
+    border-bottom: 5px solid #03045e;
+}
+th:first-of-type {
+    border-top-left-radius: 50px;
+}
+th:last-of-type {
+    border-top-right-radius: 50px;
+}
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 50px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 50px;
+}
+.navbtns
+{
+    margin-top: 5%;
 }
 a
 {
-    display: inline-block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: #4479BA;
+    color: #FFF;
+    padding: 8px 12px;
+    text-decoration: none;
 }
