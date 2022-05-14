@@ -1,4 +1,6 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^localhost/RabIT_application/RabIT-application/src/
-RewriteCond %{REQUEST_URI} !^/index.php?home&data=mvc
-RewriteRule ^(.*)$ /index.php?home&data=mvc
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^localhost/RabIT_application/RabIT-application/src/
+#RewriteCond %{REQUEST_URI} !^/index.php?home&data=mvc
+#RewriteRule ^(.*)$ /index.php?home&data=mvc
+
+#Due to my inexperience and the timeframe for the project after a bit of experimenting with it I decided to leave the URL mapping undone for the project
