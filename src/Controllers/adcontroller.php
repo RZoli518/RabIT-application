@@ -9,6 +9,7 @@ class Adcontroller
 		
 		if(isset($variables['data']))
 		{
+			//get information from the database then pass it to the view loader to open adlist.php using it
 			$requestData = $adModel->get_data();
 			$view = new ViewLoader('adlist');
 			$view->assign('data', $requestData);

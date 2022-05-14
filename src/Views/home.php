@@ -1,12 +1,15 @@
 <html>
-    <head> 
-        <h1>Home</h1>
+<style>
+        <?php include "style.css" ?>
+    </style>
+    <head>
+        <h1>RabIT Aplication</h1>
     </head>
     <body>
         <h1> Welcome! </h1>
-        <hr/>
-        <h2> Requested data: </h2>
-        <h4> <?php echo $viewData['title']; ?> </h4>
-        <p> <?php echo $viewData['content']; ?> </p>
+        <div class=buttons>
+            <a href="http://localhost/RabIT_application/RabIT-application/src/index.php?ad&data=mvc">Advertisements</a>
+            <a href="http://localhost/RabIT_application/RabIT-application/src/index.php?user&data=mvc">Users</a>
+        </div>
     </body>
 </html>

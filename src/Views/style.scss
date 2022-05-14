@@ -1,0 +1,33 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+.column {
+  display:inline-block;
+  width:33%;
+  margin-right:-4px;
+  height:100%;
+  z-index: -10;
+}
+.column-a 
+{
+    background-color:yellow;
+}
+.column-b 
+{
+    background-color:blue;
+}
+.column-c 
+{
+    background-color:yellow;
+}
+table
+{
+    width: 60%;
+    margin: auto;
+}
+a
+{
+    display: inline-block;
+}
